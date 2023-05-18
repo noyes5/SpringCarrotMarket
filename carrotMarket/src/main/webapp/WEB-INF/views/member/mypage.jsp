@@ -152,8 +152,8 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body">
-					<form action="/carrot/member/update.nick">
+				<form action="/carrot/member/update.nick">
+					<div class="modal-body">
 						<div class="form-group">
 							<input type="hidden" name='id' value="<%=user.getUser_id()%>">
 							<label for="old" class="col-form-label">기존 닉네임</label>
@@ -379,8 +379,7 @@
 	        	if(out=='<%=user.getPassword()%>'){
 	        		alert('탈퇴가 완료되었습니다.');
 
-	        		window.location.href = "/carrot/member/delete?id=<%=user.getUser_id()%>
-		";
+	        		window.location.href = "/carrot/member/delete?id=<%=user.getUser_id()%>";
 				} else {
 
 					alert("비밀번호가 일치하지 않습니다.");

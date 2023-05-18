@@ -27,7 +27,7 @@
 							onerror="this.onerror=null; this.src='https://d1unjqcospf8gs.cloudfront.net/assets/users/default_profile_80-c649f052a34ebc4eee35048815d8e4f73061bf74552558bb70e07133f25524f9.png';" />
 			</div>
 			<div class="media-body">
-				<h2><%=user.getName() %>님 구매내역</h2>
+				<h2><%=user.getNickname() %>님 구매내역</h2>
 			</div>
 		</div>
 		<div class="container">

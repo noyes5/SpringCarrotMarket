@@ -86,8 +86,11 @@ public class MemberController {
 
 	@RequestMapping("/member/update.nick")
 	public String update(String id, String nick, HttpSession session) {
-		int result = US.nicknameUpdate(id, nick);
 		UserDTO dto = (UserDTO) session.getAttribute("userdata");
+		id = dto.getUser_id();
+		int result = US.nicknameUpdate(id, nick);
+		System.out.println(id + "" + nick);
+		
 		if (result > 0) {
 			dto.setNickname(nick);
 			session.setAttribute("userdata", dto);
